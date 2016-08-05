@@ -65,5 +65,14 @@ class Usa implements Fecha
         $returnValue = $ano.$mes.$dia;
         return $returnValue;
     }
+
+    // Format mm/dd/YY to 18 de agosto de 2016
+    public function datetoStringDate()
+    {
+        $returnValue = null;
+        list($mes, $dia, $ano) = explode("/", $this->_fecha);
+        $miFecha= gmmktime(12,0,0, $mes, $dia, $ano);
+        return strftime("%A, %B %d %Y", $miFecha);
+    }
 } 
 ?>
