@@ -1,0 +1,37 @@
+{
+    "name": "bathsan/patdate",
+    "description": "Conversiones en fechas",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.x-dev"
+        }
+    },
+
+    "repositories": [
+        {
+            "type"  : "git",
+            "url"   : "https://github.com/bathsan/patDate.git"
+        }
+    ],
+
+    
+    "license": "EULA",
+    "autoload": {
+        "classmap": [
+            "src/Fechas/Usa.php"
+        ],
+        "psr-4": {
+            "bathsan\\patdate\\": "src"
+        }
+    },
+    
+    "authors": [
+        {
+            "name": "Humberto Santos",
+            "email": "1201hs@gmail.com"
+        }
+    ],
+    
+    "minimum-stability": "dev",
+    "require-all": false
+}
