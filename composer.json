@@ -19,7 +19,8 @@
     "autoload": {
         "classmap": [
             "src/Fechas/Usa.php",
-            "src/Fechas/Dates.php"
+            "src/Fechas/Mex.php",
+            "src/Dates.php"
         ],
         "psr-4": {
             "bathsan\\patdate\\": "src"
