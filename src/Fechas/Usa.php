@@ -1,6 +1,8 @@
 <?php
 namespace bathsan\patdate;
 
+use bathsan\patdate\Fecha;
+
 /*==============================================================================================================================
  * @access public
  * @author Humberto Santos
