@@ -17,9 +17,6 @@
     
     "license": "EULA",
     "autoload": {
-        "classmap": [
-            "src/Fechas/Usa.php"
-        ],
         "psr-4": {
             "bathsan\\patdate\\": "src"
         }

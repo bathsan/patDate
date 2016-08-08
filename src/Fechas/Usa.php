@@ -70,7 +70,7 @@ class Usa implements Fecha
     public function datetoStringDate()
     {
         $returnValue = null;
-        list($mes, $dia, $ano) = explode("/", $this->_fecha);
+        list($ano, $mes, $dia) = explode("-", $this->_fecha);
         $miFecha= gmmktime(12,0,0, $mes, $dia, $ano);
         return strftime("%A, %B %d %Y", $miFecha);
     }
