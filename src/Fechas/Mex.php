@@ -74,6 +74,7 @@ class Mex implements Fecha
         $returnValue = null;
         list($ano, $mes, $dia) = explode("-", $this->_fecha);
         $miFecha= gmmktime(12,0,0, $mes, $dia, $ano);
+        date_default_timezone_set('America/Mexico_City');
         setlocale(LC_TIME, 'es_MX.UTF-8');
         return strftime("%A, %B %d %Y", $miFecha);
     }
