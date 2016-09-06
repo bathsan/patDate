@@ -1,5 +1,5 @@
 <?php
-namespace bathsan\patdate;
+namespace bathsan\patdate\Fechas;
 
 use bathsan\patdate\Fecha;
 
@@ -71,12 +71,12 @@ class Mex implements Fecha
     // Format mm/dd/YY to 18 de agosto de 2016
     public function datetoStringDate()
     {
+        $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
+        $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         $returnValue = null;
         list($ano, $mes, $dia) = explode("-", $this->_fecha);
         $miFecha= gmmktime(12,0,0, $mes, $dia, $ano);
-        date_default_timezone_set('America/Mexico_City');
-        setlocale(LC_TIME, 'es_MX.UTF-8');
-        return strftime("%A, %B %d %Y", $miFecha);
+        return $dias[date('w', $miFecha)]." ".date('d', $miFecha)." de ".$meses[date('n', $miFecha)-1]. " del ".date('Y', $miFecha);
     }
 } 
 ?>

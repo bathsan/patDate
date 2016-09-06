@@ -2,8 +2,8 @@
 namespace bathsan\patdate;
 
 use bathsan\patdate\Fecha;
-use bathsan\patdate\Usa;
-use bathsan\patdate\Mex;
+use bathsan\patdate\Fechas\Usa;
+use bathsan\patdate\Fechas\Mex;
 
 /*==============================================================================================================================
  * @access public

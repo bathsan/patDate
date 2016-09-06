@@ -1,5 +1,5 @@
 <?php
-namespace bathsan\patdate;
+namespace bathsan\patdate\Fechas;
 
 use bathsan\patdate\Fecha;
 
