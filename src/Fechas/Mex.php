@@ -77,6 +77,14 @@ class Mex implements Fecha
         $miFecha= gmmktime(12,0,0, $mes, $dia, $ano);
         return $this->_dias[date('w', $miFecha)]." ".date('d', $miFecha)." de ".$this->_meses[date('n', $miFecha)-1]. " del ".date('Y', $miFecha);
     }
+    // Format mm/dd/YY to 18 de agosto de 2016
+    public function dateMDYtoStringDate()
+    {
+        $returnValue = null;
+        list($dia, $mes, $ano) = explode("/", $this->_fecha);
+        $miFecha= strtotime($ano."-".$mes."-".$dia." 07:00:00");
+        return $this->_dias[date('w', $miFecha)]." ".date('d', $miFecha)." de ".$this->_meses[date('n', $miFecha)-1]. " del ".date('Y', $miFecha);
+    }
     public function dmYtoSeparate()
     {
         $this->_dia = substr($this->_fecha, 0, 2);
