@@ -77,6 +77,14 @@ class Usa implements Fecha
         $miFecha= gmmktime(12,0,0, $mes, $dia, $ano);
         return strftime("%A, %B %d %Y", $miFecha);
     }
+    // Format mm/dd/YY to 18 de agosto de 2016
+    public function dateMDYtoStringDate()
+    {
+        $returnValue = null;
+        list($mes, $dia, $ano) = explode("/", $this->_fecha);
+        $miFecha= strtotime($ano."-".$mes."-".$dia." 07:00:00");
+        return strftime("%A, %B %d %Y", $miFecha);
+    }
     public function dmYtoSeparate()
     {
         $this->_dia = substr($this->_fecha, 0, 2);

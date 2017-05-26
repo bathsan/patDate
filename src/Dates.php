@@ -48,6 +48,32 @@ class Dates
     }
 
     /*==============================================================================================================================
+    * Funcion para inicializar que debe usar un formato dependiendo el pais la Fecha
+    ==============================================================================================================================*/
+    public static function dateMDYtoStringDate($fechaString, $formato=false)
+    {
+        if (!self::$_ignore) {
+            if ($formato) {
+                self::$_formato = $formato;
+            }
+        }
+
+        switch (self::$_formato) {
+            case 'es':
+                $fecha = new Mex($fechaString);
+                break;
+            case 'en':
+                $fecha = new Usa($fechaString);
+                break;
+            default:
+                $fecha = new Usa($fechaString);
+                break;
+        }
+        
+        return $fecha->dateMDYtoStringDate();
+    }
+
+    /*==============================================================================================================================
     * Funcion para pasar una fecha de formato ddmmYY to dd de(of) mm del(of) YYYY 
     ==============================================================================================================================*/
     public static function dmYtoText($fechaString, $formato=false)
